@@ -7,14 +7,18 @@ makeCacheMatrix <- function(x = matrix()) {
     makeVector(x = numeric()) {
       inv <- NULL
     }
-  
+    ##Setting the value of the vector
     set <- function(y) {
       x <<- y
       inv <<- NULL
     }
-    
+    ##Getting the value of the vector
     get <- function() x
+    
+    ##Setting the value of the inverse
     setInverse <-function(solveMatrix) inv <<- solveMatrix
+    
+    ##Getting the value of the inverse
     getInverse <- function() inv
     list(set = set, get = get, setInverse = setInverse, getInverse=getInverse)
 }
